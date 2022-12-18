@@ -3,7 +3,7 @@ package DZ4;
 import java.util.Scanner;
 
 /**
- * В калькулятор добавьте возможность отменить последнюю операцию.
+ * Р’ РєР°Р»СЊРєСѓР»СЏС‚РѕСЂ РґРѕР±Р°РІСЊС‚Рµ РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ РѕС‚РјРµРЅРёС‚СЊ РїРѕСЃР»РµРґРЅСЋСЋ РѕРїРµСЂР°С†РёСЋ.
  */
 public class Task3 {
 
@@ -12,21 +12,21 @@ public class Task3 {
         int oneNumber;
         int twoNumber;
         String operation;
-        System.out.print("Введите первое число: ");
+        System.out.print("Р’РІРµРґРёС‚Рµ РїРµСЂРІРѕРµ С‡РёСЃР»Рѕ: ");
         Scanner sc = new Scanner(System.in);
         if (sc.hasNextInt()) {
             oneNumber = sc.nextInt();
-            System.out.print("Введите второе число: ");
+            System.out.print("Р’РІРµРґРёС‚Рµ РІС‚РѕСЂРѕРµ С‡РёСЃР»Рѕ: ");
             if (sc.hasNextInt()) {
                 twoNumber = sc.nextInt();
-                System.out.print("Выберити арифметическую операцию (+ - * /) ");
+                System.out.print("Р’С‹Р±РµСЂРёС‚Рё Р°СЂРёС„РјРµС‚РёС‡РµСЃРєСѓСЋ РѕРїРµСЂР°С†РёСЋ (+ - * /) ");
                 if (sc.hasNext()) {
                     operation = sc.next();
-                    System.out.println("Вы хотите отменить последнюю операцию и ввести новую?");
-                    System.out.println("Введите Yes/No");
+                    System.out.println("Р’С‹ С…РѕС‚РёС‚Рµ РѕС‚РјРµРЅРёС‚СЊ РїРѕСЃР»РµРґРЅСЋСЋ РѕРїРµСЂР°С†РёСЋ Рё РІРІРµСЃС‚Рё РЅРѕРІСѓСЋ?");
+                    System.out.println("Р’РІРµРґРёС‚Рµ Yes/No");
                     String result = sc.next();
                     if (result.toLowerCase().equals("yes")) {
-                        System.out.print("Выберити арифметическую операцию (+ - * /) ");
+                        System.out.print("Р’С‹Р±РµСЂРёС‚Рё Р°СЂРёС„РјРµС‚РёС‡РµСЃРєСѓСЋ РѕРїРµСЂР°С†РёСЋ (+ - * /) ");
                         if (sc.hasNext()) {
                             operation = sc.next();
                         }
@@ -34,33 +34,33 @@ public class Task3 {
 
                         switch (operation) {
                             case ("+"):
-                                System.out.println("Итог = " + (oneNumber + twoNumber));
+                                System.out.println("РС‚РѕРі = " + (oneNumber + twoNumber));
                                 break;
                             case ("-"):
-                                System.out.println("Итог = " + (oneNumber - twoNumber));
+                                System.out.println("РС‚РѕРі = " + (oneNumber - twoNumber));
                                 break;
                             case ("*"):
-                                System.out.println("Итог = " + (oneNumber * twoNumber));
+                                System.out.println("РС‚РѕРі = " + (oneNumber * twoNumber));
                                 break;
                             case ("/"):
                                 try {
-                                    System.out.println("Итог = " + (oneNumber / twoNumber));
+                                    System.out.println("РС‚РѕРі = " + (oneNumber / twoNumber));
                                 } catch (ArithmeticException e) {
-                                    System.out.println("Делить на ноль нельзя");
+                                    System.out.println("Р”РµР»РёС‚СЊ РЅР° РЅРѕР»СЊ РЅРµР»СЊР·СЏ");
                                 }
                                 break;
                             default:
-                                System.out.println("Неизветсная операция");
+                                System.out.println("РќРµРёР·РІРµС‚СЃРЅР°СЏ РѕРїРµСЂР°С†РёСЏ");
                                 break;
                         }
 
                 }
 
             }
-            else System.out.println("Вы ввели не число");
+            else System.out.println("Р’С‹ РІРІРµР»Рё РЅРµ С‡РёСЃР»Рѕ");
 
         }
-        else System.out.println("Вы ввели не число");
+        else System.out.println("Р’С‹ РІРІРµР»Рё РЅРµ С‡РёСЃР»Рѕ");
         sc.close();
     }
 }

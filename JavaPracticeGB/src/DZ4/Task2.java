@@ -2,9 +2,9 @@ package DZ4;
 
 
 /**
- * Реализуйте очередь с помощью LinkedList со следующими методами:
- * enqueue() - помещает элемент в конец очереди, dequeue() - возвращает первый элемент из очереди и удаляет его,
- * first() - возвращает первый элемент из очереди, не удаляя.
+ * Р РµР°Р»РёР·СѓР№С‚Рµ РѕС‡РµСЂРµРґСЊ СЃ РїРѕРјРѕС‰СЊСЋ LinkedList СЃРѕ СЃР»РµРґСѓСЋС‰РёРјРё РјРµС‚РѕРґР°РјРё:
+ * enqueue() - РїРѕРјРµС‰Р°РµС‚ СЌР»РµРјРµРЅС‚ РІ РєРѕРЅРµС† РѕС‡РµСЂРµРґРё, dequeue() - РІРѕР·РІСЂР°С‰Р°РµС‚ РїРµСЂРІС‹Р№ СЌР»РµРјРµРЅС‚ РёР· РѕС‡РµСЂРµРґРё Рё СѓРґР°Р»СЏРµС‚ РµРіРѕ,
+ * first() - РІРѕР·РІСЂР°С‰Р°РµС‚ РїРµСЂРІС‹Р№ СЌР»РµРјРµРЅС‚ РёР· РѕС‡РµСЂРµРґРё, РЅРµ СѓРґР°Р»СЏСЏ.
  */
 public class Task2 {
     public static void main(String[] args) {
@@ -13,11 +13,11 @@ public class Task2 {
         myQueue.enqueue(6);
         myQueue.enqueue(1);
         myQueue.enqueue(2);
-        System.out.println("Текущая очередь "+myQueue.getAllQueue());
-        System.out.println("Удаление первого элемента очереди "+myQueue.dequeue());
-        System.out.println("Текущая очередь "+myQueue.getAllQueue());
-        System.out.println("Первый элемент очереди "+myQueue.first());
-        System.out.println("Текущая очередь "+myQueue.getAllQueue());
+        System.out.println("РўРµРєСѓС‰Р°СЏ РѕС‡РµСЂРµРґСЊ "+myQueue.getAllQueue());
+        System.out.println("РЈРґР°Р»РµРЅРёРµ РїРµСЂРІРѕРіРѕ СЌР»РµРјРµРЅС‚Р° РѕС‡РµСЂРµРґРё "+myQueue.dequeue());
+        System.out.println("РўРµРєСѓС‰Р°СЏ РѕС‡РµСЂРµРґСЊ "+myQueue.getAllQueue());
+        System.out.println("РџРµСЂРІС‹Р№ СЌР»РµРјРµРЅС‚ РѕС‡РµСЂРµРґРё "+myQueue.first());
+        System.out.println("РўРµРєСѓС‰Р°СЏ РѕС‡РµСЂРµРґСЊ "+myQueue.getAllQueue());
 
     }
 }

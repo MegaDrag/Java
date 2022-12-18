@@ -4,7 +4,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 
 /**
- * Пусть дан LinkedList с несколькими элементами. Реализуйте метод, который вернет “перевернутый” список
+ * РџСѓСЃС‚СЊ РґР°РЅ LinkedList СЃ РЅРµСЃРєРѕР»СЊРєРёРјРё СЌР»РµРјРµРЅС‚Р°РјРё. Р РµР°Р»РёР·СѓР№С‚Рµ РјРµС‚РѕРґ, РєРѕС‚РѕСЂС‹Р№ РІРµСЂРЅРµС‚ вЂњРїРµСЂРµРІРµСЂРЅСѓС‚С‹Р№вЂќ СЃРїРёСЃРѕРє
  */
 public class Task1 {
     public static void main(String[] args) {
@@ -13,13 +13,13 @@ public class Task1 {
         for (int i = 0; i < 20; i++) {
             list.add(i);
         }
-        System.out.print("Изначальный список - ");
+        System.out.print("РР·РЅР°С‡Р°Р»СЊРЅС‹Р№ СЃРїРёСЃРѕРє - ");
         for (Object o: list
              ) {
             System.out.print(o+" ");
         }
         System.out.println();
-        System.out.print("Перевернутый список - ");
+        System.out.print("РџРµСЂРµРІРµСЂРЅСѓС‚С‹Р№ СЃРїРёСЃРѕРє - ");
         reverseList(list);
 
     }
