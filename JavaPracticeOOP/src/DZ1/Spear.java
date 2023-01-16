@@ -10,4 +10,5 @@ public class Spear extends BasicData {
     }
     public Spear() {
     }
+
 }

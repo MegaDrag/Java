@@ -24,11 +24,11 @@ public class BasicData {
 
     @Override
     public String toString() {
-        return "Имя=" + name +
-                ", Атака=" + attack +
-                ", Защита=" + protection +
-                ", Урон=" + Arrays.toString(damage) +
-                ", Здоровье=" + health +
-                ", Скорость=" + speed ;
+        return "РРјСЏ=" + name +
+                ", РђС‚Р°РєР°=" + attack +
+                ", Р—Р°С‰РёС‚Р°=" + protection +
+                ", РЈСЂРѕРЅ=" + Arrays.toString(damage) +
+                ", Р—РґРѕСЂРѕРІСЊРµ=" + health +
+                ", РЎРєРѕСЂРѕСЃС‚СЊ=" + speed ;
     }
 }

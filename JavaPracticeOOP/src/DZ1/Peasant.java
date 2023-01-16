@@ -19,6 +19,6 @@ public class Peasant extends BasicData {
     @Override
     public String toString() {
         return super.toString()+
-                ", Доставка=" + delivery;
+                ", Р”РѕСЃС‚Р°РІРєР°=" + delivery;
     }
 }

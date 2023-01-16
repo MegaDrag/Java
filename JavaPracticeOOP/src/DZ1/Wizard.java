@@ -18,6 +18,6 @@ public class Wizard extends BasicData {
     @Override
     public String toString() {
         return super.toString()+
-                ", Магия=" + magic;
+                ", РњР°РіРёСЏ=" + magic;
     }
 }

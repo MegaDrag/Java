@@ -10,4 +10,5 @@ public class Rogue extends BasicData {
     }
     public Rogue() {
     }
+
 }

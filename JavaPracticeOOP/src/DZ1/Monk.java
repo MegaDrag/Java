@@ -18,6 +18,6 @@ public class Monk extends BasicData  {
     @Override
     public String toString() {
         return super.toString()+
-                ", Магия=" + magic;
+                ", РњР°РіРёСЏ=" + magic;
     }
 }

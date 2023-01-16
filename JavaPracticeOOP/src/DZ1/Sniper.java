@@ -19,6 +19,6 @@ public class Sniper extends BasicData {
     @Override
     public String toString() {
         return super.toString()+
-                ", Выстрел=" + shot;
+                ", Р’С‹СЃС‚СЂРµР»=" + shot;
     }
 }
