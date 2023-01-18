@@ -9,7 +9,7 @@ public class Crossbow extends BasicData {
     }
 
     public Crossbow(String name) {
-        super(name,6,3,new int[] {2,3},10,4);
+        super(name,6, 3,new int[] {2,3},10,4);
         this.shot = 16;
     }
     public Crossbow() {

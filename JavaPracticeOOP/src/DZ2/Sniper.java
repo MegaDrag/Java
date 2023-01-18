@@ -9,16 +9,17 @@ public class Sniper extends BasicData {
     }
 
     public Sniper(String name) {
-        super(name,12,10,new int[] {8,10},15,9);
+        super(name, 12, 10, new int[]{8, 10}, 15, 9);
         this.shot = 32;
     }
-    public Sniper(){
+
+    public Sniper() {
 
     }
 
     @Override
     public String toString() {
-        return super.toString()+
+        return super.toString() +
                 ", Выстрел=" + shot;
     }
 }

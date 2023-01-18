@@ -6,8 +6,9 @@ public class Spear extends BasicData {
     }
 
     public Spear(String name) {
-        super(name,4,5,new int[] {1,3},10,4);
+        super(name, 4, 5, new int[]{1, 3}, 10, 4);
     }
+
     public Spear() {
     }
 

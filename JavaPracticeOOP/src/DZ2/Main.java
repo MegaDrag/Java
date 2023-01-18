@@ -5,10 +5,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
- Добавить файл с описанием интерфейса. В котором описать два метода, void step(); и String getInfo();
- Реализовать имнтерфейс в абстрактном классе.
- Создать два списка в классе main. В каждый из списков добавить по десять экземнляров наследников BaseHero.
-Реализовать метод step() для магов таким образом, чтобы они могли лечить самого повреждённого из своих однополчан!) Удалить ненужные методы из абстрактного класса, если такие есть.
+ * Добавить файл с описанием интерфейса. В котором описать два метода, void step(); и String getInfo();
+ * Реализовать имнтерфейс в абстрактном классе.
+ * Создать два списка в классе main. В каждый из списков добавить по десять экземнляров наследников BaseHero.
+ * Реализовать метод step() для магов таким образом, чтобы они могли лечить самого повреждённого из своих однополчан!) Удалить ненужные методы из абстрактного класса, если такие есть.
  */
 public class Main {
     static String[] namePerson = new String[]{"Алексей", "Александр", "Владимир", "Дмитрий", "Михаил", "Андрей", "Евгений", "Ашот", "Антон", "Виктор"};
@@ -132,7 +132,7 @@ public class Main {
     public static void getListPersonsObjectType(ArrayList list, Object o) {
         for (int i = 0; i < list.size(); i++) {
             if (o.getClass().getSimpleName() == (list.get(i)).getClass().getSimpleName()) {
-               System.out.println("Класс=" + getObjectType(list.get(i)) + ", " + list.get(i));
+                System.out.println("Класс=" + getObjectType(list.get(i)) + ", " + list.get(i));
             }
 
         }
