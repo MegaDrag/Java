@@ -1,4 +1,4 @@
-package DZ1;
+package DZ2;
 
 public class Spear extends BasicData {
     public Spear(String name, int attack, int protection, int[] damage, int health, int speed) {

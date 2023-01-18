@@ -1,12 +1,14 @@
-package DZ1;
+package DZ2;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
-public class BasicData {
+public abstract class BasicData implements Heal {
     private String name;
     private int attack;
     private int protection;
     private int[] damage;
+    private  int maxHealth;
     private int health;
     private  int speed;
 
@@ -15,12 +17,34 @@ public class BasicData {
         this.attack = attack;
         this.protection = protection;
         this.damage = damage;
-        this.health = health;
+        this.maxHealth =health;
+        this.health = maxHealth - ((int) (Math.random() * maxHealth));
         this.speed = speed;
     }
 
     public BasicData() {
     }
+
+    public String getInfo() {
+        return String.valueOf(Math.round((health*1.0/maxHealth *100)*100.0 /100.0));
+    }
+
+    public void heal(ArrayList<BasicData> list) {
+
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
+    }
+
+    public int[] getDamage() {
+        return damage;
+    }
+
 
     @Override
     public String toString() {
@@ -28,7 +52,7 @@ public class BasicData {
                 ", Атака=" + attack +
                 ", Защита=" + protection +
                 ", Урон=" + Arrays.toString(damage) +
-                ", Здоровье=" + health +
+                ", Здоровье=" + health+"/"+ maxHealth +" ("+getInfo()+"%)"+
                 ", Скорость=" + speed ;
     }
 }

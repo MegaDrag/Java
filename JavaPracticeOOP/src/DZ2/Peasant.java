@@ -1,4 +1,4 @@
-package DZ1;
+package DZ2;
 
 public class Peasant extends BasicData {
     private  int delivery;

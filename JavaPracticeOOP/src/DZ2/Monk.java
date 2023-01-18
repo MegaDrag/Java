@@ -1,4 +1,4 @@
-package DZ1;
+package DZ2;
 
 public class Monk extends BasicData  {
     private int magic;
