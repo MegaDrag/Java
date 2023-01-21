@@ -1,9 +1,9 @@
-package DZ2;
+package DZ3.unit;
 
 import java.util.ArrayList;
 
 public interface Heal {
-    public void heal(ArrayList<BasicData> list);
+    public void step(ArrayList<BasicData> list);
 
     public String getInfo();
 

@@ -1,4 +1,4 @@
-package DZ2;
+package DZ3.unit;
 
 public class Rogue extends BasicData {
     public Rogue(String name, int attack, int protection, int[] damage, int health, int speed) {

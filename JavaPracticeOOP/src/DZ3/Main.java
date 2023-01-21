@@ -1,34 +1,29 @@
-package DZ2;
+package DZ3;
 
+
+import DZ3.unit.*;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Scanner;
 
-/**
- * Добавить файл с описанием интерфейса. В котором описать два метода, void step(); и String getInfo();
- * Реализовать имнтерфейс в абстрактном классе.
- * Создать два списка в классе main. В каждый из списков добавить по десять экземнляров наследников BaseHero.
- * Реализовать метод step() для магов таким образом, чтобы они могли лечить самого повреждённого из своих однополчан!) Удалить ненужные методы из абстрактного класса, если такие есть.
- */
 public class Main {
     static String[] namePerson = new String[]{"Алексей", "Александр", "Владимир", "Дмитрий", "Михаил", "Андрей", "Евгений", "Ашот", "Антон", "Виктор"};
-    //static ArrayList<BasicData> persons = new ArrayList<>();
 
     public static void main(String[] args) {
         ArrayList<BasicData> team1 = new ArrayList<>();
-        ArrayList<BasicData> team2 = new ArrayList<>();
-        for (int i = 0; i < 1; i++) {
-            createPersonAll(team1);
-            createPersonAll(team2);
+        for (int i = 0; i < 5; i++) {
+            createPerson(team1);
         }
         getListPersons(team1);
-        for (int i = 0; i < team1.size(); i++) {
-            team1.get(i).heal(team1);
-        }
-        System.out.println("=============");
-        getListPersons(team2);
-        for (int i = 0; i < team2.size(); i++) {
-            team2.get(i).heal(team2);
+        System.out.println("===============");
+        Scanner scanner = new Scanner(System.in);
+        String line = scanner.nextLine();
+        while (line.isEmpty()) {
+            for (int i = 0; i < team1.size(); i++) {
+                team1.get(i).step(team1);
+            }
+            updatePeasantDelivery(team1);
+            line=scanner.nextLine();
         }
 
     }
@@ -118,7 +113,7 @@ public class Main {
      */
     public static void getListPersons(ArrayList list) {
         for (int i = 0; i < list.size(); i++) {
-            System.out.println("Класс=" + getObjectType(list.get(i)) + ", " + list.get(i));
+           System.out.println("Класс=" + getObjectType(list.get(i)) + ", " + list.get(i));
         }
 
 
@@ -137,6 +132,13 @@ public class Main {
 
         }
 
+    }
+    public static void updatePeasantDelivery(ArrayList<BasicData> list) {
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i) instanceof Peasant){
+                ((Peasant) list.get(i)).setDelivery(1);
+            }
+        }
     }
 
 }

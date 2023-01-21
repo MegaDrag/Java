@@ -1,4 +1,4 @@
-package DZ2;
+package DZ3.unit;
 
 public class Crossbow extends BasicData {
     private int shot;
@@ -18,6 +18,6 @@ public class Crossbow extends BasicData {
     @Override
     public String toString() {
         return  super.toString()+
-                ", Выстрел=" + shot;
+                ", Стрелы=" + shot;
     }
 }

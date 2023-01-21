@@ -1,4 +1,4 @@
-package DZ2;
+package DZ3.unit;
 
 public class Peasant extends BasicData {
     private int delivery;
@@ -14,6 +14,14 @@ public class Peasant extends BasicData {
     }
 
     public Peasant() {
+    }
+
+    public int getDelivery() {
+        return delivery;
+    }
+
+    public void setDelivery(int delivery) {
+        this.delivery = delivery;
     }
 
     @Override

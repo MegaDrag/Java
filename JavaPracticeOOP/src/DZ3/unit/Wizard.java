@@ -1,4 +1,4 @@
-package DZ2;
+package DZ3.unit;
 
 import java.util.ArrayList;
 
@@ -19,22 +19,25 @@ public class Wizard extends BasicData {
     }
 
     @Override
-    public void heal(ArrayList<BasicData> list) {
+    public void step(ArrayList<BasicData> list) {
         int min = Integer.parseInt(list.get(0).getInfo());
         int index = 0;
-        int indexWizard = 0;
         for (int i = 1; i < list.size(); i++) {
-            if (list.get(i) instanceof Wizard) {
-                indexWizard = i;
-            }
             if (Integer.parseInt(list.get(i).getInfo()) < min) {
                 min = Integer.parseInt(list.get(i).getInfo());
                 index = i;
             }
         }
-        System.out.println();
-        list.get(index).setHealth(list.get(index).getHealth() + list.get(indexWizard).getDamage()[0] * -1);
-        System.out.println("Подлечили бойца " + list.get(index));
+        if (min==100) {
+            System.out.println("Колдун " + this.getName() + " никого не вылечил, все здоровы");
+        }
+        else if (list.get(index).getMaxHealth()-list.get(index).getHealth()>=5) {
+            list.get(index).setHealth(list.get(index).getHealth() + getDamage()[0] * -1);
+            System.out.println("Колдун " + this.getName() + " подлечил бойца " + list.get(index));
+        }
+        else {list.get(index).setHealth(list.get(index).getMaxHealth());
+            System.out.println("Колдун " + this.getName() + " подлечил бойца " + list.get(index));
+        }
     }
 
     @Override
