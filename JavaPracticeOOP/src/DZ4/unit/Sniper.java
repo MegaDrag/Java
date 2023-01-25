@@ -1,23 +1,15 @@
-package DZ3.unit;
+package DZ4.unit;
 
 import java.util.ArrayList;
 
 public class Sniper extends BasicData {
     private int shot;
 
-    public Sniper(String name, int attack, int protection, int[] damage, int health, int speed, int shot) {
-        super(name, attack, protection, damage, health, speed);
-        this.shot = shot;
-    }
-
-    public Sniper(String name) {
-        super(name, 12, 10, new int[]{8, 10}, 15, 9);
+    public Sniper(String name, ArrayList<BasicData> array, int x, int y) {
+        super(name, array, x, y, 12, 10, new int[]{8, 10}, 15, 9);
         this.shot = 32;
     }
 
-    public Sniper() {
-
-    }
 
     @Override
     public void step(ArrayList<BasicData> list) {
@@ -29,12 +21,12 @@ public class Sniper extends BasicData {
                  shot++;
                  ((Peasant) list.get(i)).setDelivery(0);
                  System.out.println("Крестьянин "+list.get(i).getName()+" пополнил запасы стрел снайпера "+this.getName());
-                 System.out.println(this.toString());
+                // System.out.println(this.toString());
                  break;
 
              }
          }
-         System.out.println("=========");
+       //  System.out.println("=========");
      }
 
          else System.out.println("У снайпера "+this.getName()+" кончились стрелы кончились");
@@ -43,6 +35,6 @@ public class Sniper extends BasicData {
     @Override
     public String toString() {
         return super.toString() +
-                ", Стрелы=" + shot;
+                ", "+ '\u27B9'+" = " + shot;
     }
 }

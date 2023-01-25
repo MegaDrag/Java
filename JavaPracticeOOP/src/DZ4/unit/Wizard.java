@@ -1,22 +1,16 @@
-package DZ3.unit;
+package DZ4.unit;
 
 import java.util.ArrayList;
 
 public class Wizard extends BasicData {
     private int magic;
 
-    public Wizard(String name, int attack, int protection, int[] damage, int health, int speed, int magic) {
-        super(name, attack, protection, damage, health, speed);
-        this.magic = magic;
-    }
 
-    public Wizard(String name) {
-        super(name, 17, 12, new int[]{-5, 0}, 30, 9);
+    public Wizard(String name, ArrayList<BasicData> array, int x, int y) {
+        super(name, array, x, y, 17, 12, new int[]{-5, 0}, 30, 9);
         this.magic = 1;
     }
 
-    public Wizard() {
-    }
 
     @Override
     public void step(ArrayList<BasicData> list) {
@@ -42,7 +36,7 @@ public class Wizard extends BasicData {
 
     @Override
     public String toString() {
-        return super.toString() +
-                ", Магия=" + magic;
+        return super.toString(); /*+
+                ", Магия=" + magic;*/
     }
 }

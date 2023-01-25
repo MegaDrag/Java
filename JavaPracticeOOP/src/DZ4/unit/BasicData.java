@@ -1,4 +1,6 @@
-package DZ3.unit;
+package DZ4.unit;
+
+import DZ4.Vector2;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -11,6 +13,8 @@ public abstract class BasicData implements Heal {
     private int maxHealth;
     private int health;
     private int speed;
+    private Vector2 position;
+    private ArrayList<BasicData> array;
 
     public BasicData(String name, int attack, int protection, int[] damage, int health, int speed) {
         this.name = name;
@@ -23,6 +27,18 @@ public abstract class BasicData implements Heal {
     }
 
     public BasicData() {
+    }
+
+    public BasicData(String name,ArrayList<BasicData> array,int x, int y, int attack, int protection, int[] damage, int health, int speed) {
+        this.name = name;
+        this.array = array;
+        this.position = new Vector2(x,y);
+        this.attack = attack;
+        this.protection = protection;
+        this.damage = damage;
+        this.maxHealth = health;
+        this.health = maxHealth - ((int) (Math.random() * maxHealth));
+        this.speed = speed;
     }
 
     public String getInfo() {
@@ -65,14 +81,22 @@ public abstract class BasicData implements Heal {
         return speed;
     }
 
+    public Vector2 getPosition() {
+        return position;
+    }
+    public  String getNameClass (){
+        return  this.getClass().getSimpleName();
+    }
+
     @Override
     public String toString() {
-        return "Имя=" + getName() +
-                ", Атака=" + getAttack() +
-                ", Защита=" + getProtection() +
-                ", Урон=" + Arrays.toString(getDamage()) +
-                ", Здоровье=" + getHealth() + "/" + getMaxHealth() + " (" + getInfo() + "%)" +
-                ", Скорость=" + getSpeed();
+        return  "Класс=" + getNameClass()+
+                ", Имя=" + getName() +
+                ", "+ '\u2694'+" = " + getAttack() +
+                ", "+ '\u26E8'+" = " + getProtection() +
+                ", "+ '\u2694'+" = " + Arrays.toString(getDamage()) +
+                ", "+ '\u2764'+" = " + getHealth() + "/" + getMaxHealth() + " (" + getInfo() + "%)" +
+                ", "+ "\uD83E\uDDB6"+" = " + getSpeed();
 
     }
 }
