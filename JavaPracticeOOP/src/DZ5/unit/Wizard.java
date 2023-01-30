@@ -1,4 +1,4 @@
-package DZ4.unit;
+package DZ5.unit;
 
 import java.util.ArrayList;
 
@@ -12,7 +12,7 @@ public class Wizard extends BasicData {
     }
 
 
-    @Override
+    /*@Override
     public void step(ArrayList<BasicData> list) {
         int min = Integer.parseInt(list.get(0).getInfo());
         int index = 0;
@@ -32,7 +32,7 @@ public class Wizard extends BasicData {
         else {list.get(index).setHealth(list.get(index).getMaxHealth());
             System.out.println("Колдун " + this.getName() + " подлечил бойца " + list.get(index));
         }
-    }
+    }*/
 
     @Override
     public String toString() {

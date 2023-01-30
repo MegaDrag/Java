@@ -1,4 +1,4 @@
-package DZ4;
+package DZ5;
 
 import java.util.Collections;
 
@@ -56,16 +56,25 @@ public class ConsoleView {
     }
     private static String getHeroChar(Vector2 position){
         String str = "| ";
+        String colorWhiteSide = AnsiColors.ANSI_GREEN;
+        String colorDarkSide = AnsiColors.ANSI_BLUE;
         for (int i = 0; i < Main.GANG_SIZE; i++) {
+            if (Main.whiteSide.get(i).getPosition().isEquals(position)){
+                if (Main.whiteSide.get(i).getHealth()==0) {
+                    colorWhiteSide = AnsiColors.ANSI_RED;
+                }
+                str = "|" + colorWhiteSide + Main.whiteSide.get(i).getName().toUpperCase().charAt(0) + AnsiColors.ANSI_RESET;
+            }
             if (Main.darkSide.get(i).getPosition().isEquals(position)) {
-                str = "|" + AnsiColors.ANSI_BLUE + Main.darkSide.get(i).getName().toUpperCase().charAt(0) + AnsiColors.ANSI_RESET + "|"
-                        + " ".repeat(3) + AnsiColors.ANSI_GREEN + Main.whiteSide.get(i) + AnsiColors.ANSI_RESET
-                        + " ".repeat(5) + AnsiColors.ANSI_BLUE + Main.darkSide.get(i) + AnsiColors.ANSI_RESET;
+                if (Main.darkSide.get(i).getHealth()==0) {
+                    colorDarkSide = AnsiColors.ANSI_RED;
+                }
+                str = "|" + colorDarkSide + Main.darkSide.get(i).getName().toUpperCase().charAt(0) + AnsiColors.ANSI_RESET + "|"
+                        + " ".repeat(3) + colorWhiteSide + Main.whiteSide.get(i) + AnsiColors.ANSI_RESET
+                        + " ".repeat(5) + colorDarkSide + Main.darkSide.get(i) + AnsiColors.ANSI_RESET;
             }
 
-            if (Main.whiteSide.get(i).getPosition().isEquals(position)){
-                str = "|" + AnsiColors.ANSI_GREEN + Main.whiteSide.get(i).getName().toUpperCase().charAt(0) + AnsiColors.ANSI_RESET;
-            }
+
         }
         return str;
     }

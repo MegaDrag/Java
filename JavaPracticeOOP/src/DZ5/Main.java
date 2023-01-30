@@ -1,7 +1,7 @@
-package DZ4;
+package DZ5;
 
 
-import DZ4.unit.*;
+import DZ5.unit.*;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -18,15 +18,17 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
         String line = scanner.nextLine();
+
         while (line.isEmpty()){
             ConsoleView.view();
-            whiteSide.forEach(n -> n.step(whiteSide));
-            darkSide.forEach(n -> n.step(darkSide));
+            whiteSide.forEach(n -> n.step(darkSide));
+            darkSide.forEach(n -> n.step(whiteSide));
             updatePeasantDelivery(whiteSide);
             updatePeasantDelivery(darkSide);
             line=scanner.nextLine();
             System.out.println("Press Enter");
         }
+
 
     }
 
